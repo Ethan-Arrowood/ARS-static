@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ARS Prototype</title>
+  <link rel="stylesheet" href="public/stylesheets/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+  <div class="outer-container">
+    <div class="container">
+      <div class="info-container">
+        <div class="info-item log-in">
+          <p>Have an account?</p>
+          <div class="btn">Log In</div>
+        </div>
+        <div class="tree">
+          <div class="leaves"></div>
+          <div class="trunk"></div>
+        </div>
+        <div class="info-item sign-up">
+          <p>Don't have an account?</p>
+          <div class="btn">Sign Up</div>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <div id="fire"></div>
+        <div class="form-item">
+          <form class="form-log-in animated" id="log-in">
+            <input id="li-usrnm" name="Username" placeholder="Username" type="text" />
+            <input id="li-pswrd" name="Password" placeholder="Password" type="Password" />
+            <button class="btn">Log in</button>
+            <a class="forgotPassword" href="forgotPassword.html">Forgot Password?</a>
+          </form>
+          <form class="form-sign-up animated" id="sign-up">
+            <input id="su-usrnm" name="Username" placeholder="Username" type="text" />
+            <input id="su-pswrd" name="Password" placeholder="Password" type="Password" />
+            <input id="su-cpswrd" name="CPassword" placeholder="Confirm Password" type="Password" />
+            <button class="btn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://rawgit.com/bodymovin/bodymovin/master/build/player/bodymovin.js"></script>
+  <script>
+
+  $("#sign-up").submit(function ( event ) {
+    var username = $("#su-usrnm").val();
+    var password = $("#su-pswrd").val();
+    var cpassword = $("#su-cpswrd").val();
+
+    if (
+      username == "demoUser" &&
+      password == "password123" &&
+      cpassword == password
+    ) {
+      window.location.replace("verifyAccount.html");
+    }
+    event.preventDefault();
+  });
+
+  $("#log-in").submit(function ( event ) {
+    var username = $("#li-usrnm").val();
+    var password = $("#li-pswrd").val();
+
+    if (
+      username == "demoUser" &&
+      password == "password123"
+    ) {
+      window.location.replace("dashboard.html");
+    }
+    event.preventDefault();
+  });
+
+
+
+
+  var currentlyVisible = ".form-log-in";
+  var currentlyHidden = ".form-sign-up";
+  $(".info-item .btn").click(function(){
+    $(".form-container").toggleClass("active");
+    $(currentlyVisible).fadeToggle('750', function() {
+      $(currentlyHidden).fadeToggle();
+      s = currentlyVisible;
+      currentlyVisible = currentlyHidden;
+      currentlyHidden = s;
+    });
+    $(".leaves").addClass("animated tada").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      $(this).removeClass("animated tada");
+    });
+  });
+
+  var animData = {
+    container: document.getElementById('fire'),
+    animType: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'http://arrowood.io/demo/fire/data.json'
+  }
+  var anim = bodymovin.loadAnimation(animData);
+  </script>
+</body>
+</html>

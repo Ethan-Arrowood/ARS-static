@@ -1,0 +1,426 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Roboto);
+body {
+  margin: 0;
+  padding: 0; }
+
+.outer-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #053D48;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.jumbo {
+  background-color: #1C6663;
+  width: 55%;
+  font-family: 'Raleway';
+  color: #FFF;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column; }
+  .jumbo h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2.1rem; }
+  .jumbo p {
+    padding: 0 12px 0 12px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.2rem; }
+  .jumbo #fire {
+    align-self: center;
+    height: 150px;
+    width: auto; }
+  .jumbo .inner-container {
+    align-self: center;
+    background-color: #FFF;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .jumbo .inner-container h3 {
+      color: #1C6663;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center; }
+    .jumbo .inner-container a {
+      cursor: pointer;
+      align-self: center;
+      border: 1px solid #FFF;
+      background-color: #1C6663;
+      padding: 10px;
+      color: #FFF;
+      font-size: 1.2rem;
+      font-weight: 200;
+      text-decoration: none;
+      transition: all 1s; }
+      .jumbo .inner-container a:hover {
+        border-color: #1C6663;
+        background-color: white;
+        color: #1C6663; }
+
+.outer-container {
+  background-color: #053D48;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  background-color: #1C6663;
+  width: 600px;
+  height: 320px;
+  display: flex;
+  font-family: 'Roboto'; }
+  .container .form-container.active {
+    margin-left: 275px; }
+  .container .form-container {
+    margin-left: 25px;
+    background-color: white;
+    height: 380px;
+    width: 305px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    transition: margin-left 1.5s; }
+    .container .form-container #fire {
+      height: 120px;
+      width: auto;
+      position: relative;
+      z-index: 0; }
+    .container .form-container .form-item form {
+      z-index: 2;
+      position: relative; }
+      .container .form-container .form-item form.form-sign-up {
+        display: none; }
+      .container .form-container .form-item form input {
+        display: block;
+        padding: 10px;
+        width: 250px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px; }
+      .container .form-container .form-item form .btn {
+        box-sizing: content-box;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        width: 250px;
+        margin: 5px;
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid #1C6663;
+        background-color: #1C6663;
+        color: white;
+        opacity: 1; }
+        .container .form-container .form-item form .btn:hover {
+          opacity: 0.7; }
+      .container .form-container .form-item form .forgotPassword {
+        padding-right: 2px;
+        color: red;
+        float: right;
+        font-size: 14px; }
+  .container .info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative; }
+    .container .info-container .info-item {
+      color: white;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 20px;
+      position: relative;
+      z-index: 1; }
+    .container .info-container .log-in {
+      text-align: center;
+      margin-right: 40px; }
+    .container .info-container .sign-up {
+      margin-left: 40px;
+      text-align: center; }
+    .container .info-container .btn {
+      cursor: pointer;
+      background-color: transparent;
+      width: 60px;
+      padding: 10px 15px;
+      border: 1px solid white;
+      font-size: 16px;
+      opacity: 1; }
+      .container .info-container .btn:hover {
+        opacity: 0.7; }
+  .container.fp {
+    flex-direction: row;
+    justify-content: center; }
+    .container.fp #fire {
+      width: 200px;
+      height: auto; }
+    .container.fp .forgotPasswordContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white; }
+      .container.fp .forgotPasswordContent h3 {
+        font-size: 1.9rem; }
+      .container.fp .forgotPasswordContent input {
+        font-size: 20px;
+        display: block;
+        padding: 10px;
+        width: 250px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px; }
+      .container.fp .forgotPasswordContent a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #FFF;
+        background-color: transparent;
+        padding: 10px 15px;
+        opacity: 1; }
+        .container.fp .forgotPasswordContent a:hover {
+          opacity: 0.7; }
+
+.tree {
+  height: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+  bottom: 30px; }
+  .tree .leaves {
+    z-index: 1;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 100px;
+    border-radius: 30%;
+    border-color: transparent transparent #6B8E23 transparent;
+    position: relative;
+    bottom: 40px; }
+    .tree .leaves:before {
+      content: " ";
+      border-style: solid;
+      border-width: 0 65px 100px 65px;
+      border-radius: 30%;
+      border-color: transparent transparent #6B8E23 transparent;
+      position: absolute;
+      left: -65px;
+      top: -100px; }
+    .tree .leaves:after {
+      content: " ";
+      border-style: solid;
+      border-width: 0 85px 100px 85px;
+      border-radius: 30%;
+      border-color: transparent transparent #6B8E23 transparent;
+      position: absolute;
+      left: -85px;
+      top: -50px; }
+  .tree .trunk {
+    z-index: 0;
+    width: 100px;
+    height: 50px;
+    background-color: #8B4513;
+    position: absolute;
+    bottom: 0px; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+.page {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+  .page .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    transition: height 1s;
+    background-color: transparent;
+    flex: 0 1 auto; }
+    .page .navbar.br-h {
+      height: 55px; }
+    .page .navbar .nav {
+      width: 100%;
+      height: 70%;
+      transition: height 1s;
+      background-color: #1C6663;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 3%;
+      box-sizing: border-box; }
+      .page .navbar .nav.br-h {
+        height: 100%; }
+      .page .navbar .nav .brand a {
+        text-decoration: none;
+        font-family: 'Raleway';
+        color: #fff;
+        font-size: 1.5rem; }
+      .page .navbar .nav .menu {
+        color: white;
+        width: 200px;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .page .navbar .nav .menu ul {
+          margin: 0;
+          padding: 0; }
+          .page .navbar .nav .menu ul li {
+            display: inline;
+            list-style-type: none;
+            padding-left: 5px;
+            padding-right: 5px; }
+            .page .navbar .nav .menu ul li a {
+              text-decoration: none;
+              color: inherit; }
+    .page .navbar .breadcrumb-bar {
+      width: 100%;
+      height: 30%;
+      background-color: #053D48;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      transition: height 1s; }
+      .page .navbar .breadcrumb-bar.hide {
+        height: 0%; }
+      .page .navbar .breadcrumb-bar .breadcrumbs {
+        margin-left: 10px; }
+        .page .navbar .breadcrumb-bar .breadcrumbs.hide {
+          visibility: hidden; }
+        .page .navbar .breadcrumb-bar .breadcrumbs a {
+          text-decoration: none;
+          margin: 0;
+          color: white; }
+          .page .navbar .breadcrumb-bar .breadcrumbs a:hover {
+            text-decoration: underline; }
+      .page .navbar .breadcrumb-bar .icons {
+        margin-right: 5px;
+        color: white; }
+        .page .navbar .breadcrumb-bar .icons i {
+          cursor: pointer;
+          padding: 3px; }
+          .page .navbar .breadcrumb-bar .icons i.expand {
+            margin-top: 19px;
+            background-color: #053D48; }
+  .page .dashboard {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 1px;
+    transition: height 1s; }
+    .page .dashboard .components {
+      height: 100%;
+      width: 70%;
+      border-right: 1px solid #1C6663;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      box-sizing: border-box; }
+      .page .dashboard .components .component {
+        font-family: 'Raleway';
+        font-weight: 400;
+        border: 1px solid #1C6663;
+        border-radius: 5px;
+        padding: 5px;
+        height: 150px;
+        width: 200px;
+        text-align: center;
+        background-color: #1C6663;
+        color: white;
+        opacity: 1; }
+        .page .dashboard .components .component:hover {
+          opacity: 0.7; }
+    .page .dashboard .status_notif {
+      border-left: 1px solid #053D48;
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-flow: column; }
+      .page .dashboard .status_notif .child_status {
+        background-color: #053D48;
+        color: white;
+        font-family: 'Raleway';
+        height: 15%;
+        margin: 3px;
+        border: 2px solid #053D48;
+        border-radius: 5px;
+        text-align: center; }
+        .page .dashboard .status_notif .child_status h3 {
+          margin-bottom: 0; }
+        .page .dashboard .status_notif .child_status p {
+          display: inline;
+          margin-left: 5px; }
+          .page .dashboard .status_notif .child_status p.ok {
+            color: green; }
+          .page .dashboard .status_notif .child_status p.not-ok {
+            color: red; }
+      .page .dashboard .status_notif .notif_feed {
+        flex: 1 1 auto;
+        border: 2px solid #053D48;
+        margin: 3px;
+        padding-top: 1px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        flex-flow: column; }
+        .page .dashboard .status_notif .notif_feed .notif_title {
+          background-color: white;
+          width: 100%;
+          border-bottom: 2px solid #053D48;
+          position: relative; }
+          .page .dashboard .status_notif .notif_feed .notif_title h3 {
+            position: relative;
+            z-index: 0; }
+          .page .dashboard .status_notif .notif_feed .notif_title i {
+            cursor: pointer;
+            z-index: 1;
+            position: absolute;
+            top: 5px;
+            right: 10px; }
+        .page .dashboard .status_notif .notif_feed .notifications {
+          overflow: auto;
+          transition: max-height 1s;
+          max-height: 400px; }
+          .page .dashboard .status_notif .notif_feed .notifications.hide {
+            overflow: hidden;
+            max-height: 0; }
+        .page .dashboard .status_notif .notif_feed .notif {
+          margin-bottom: 2px;
+          height: 10%;
+          flex: 0 1 auto;
+          border-bottom: 1px solid #1C6663; }
+
+/*# sourceMappingURL=index.css.map */

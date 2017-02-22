@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>ARS Prototype</title>
+  <link rel="stylesheet" href="public/stylesheets/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="page">
+
+    <div class="navbar">
+
+      <nav class="nav">
+        <div class="brand">
+          <a href="#">Camp Arrowood</a>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x" aria-hidden="true"></i>
+                <i class="fa fa-bell-o fa-stack-1x" aria-hidden="true"></i>
+              </span>
+            </a></li>
+            <li><a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x" aria-hidden="true"></i>
+                <i class="fa fa-cogs fa-stack-1x" aria-hidden="true"></i>
+              </span>
+            </a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="breadcrumb-bar">
+        <div class="breadcrumbs">
+          <a href="#">/Dashboard</a>
+        </div>
+        <div class="icons">
+          <i id="br-control" class="fa fa-minus" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="dashboard">
+      <div class="components">
+        <div class="component">
+          <h3>Sign Up For Camp</h3>
+          <i class="fa fa-4x fa-pencil"></i>
+        </div>
+        <div class="component">
+          <h3>Medical Info Portal </h3>
+          <i class="fa fa-4x fa-medkit"></i>
+        </div>
+        <div class="component">
+          <h3>Payment Portal</h3>
+          <i class="fa fa-4x fa-money"></i>
+        </div>
+        <div class="component" id="finish-demo">
+          <h3>Finish Demo</h3>
+          <i class="fa fa-4x fa-check"></i>
+        </div>
+      </div>
+      <div class="status_notif">
+        <div class="child_status">
+          <h3>Child Status: John</h3>
+          <br>
+          <i class="fa fa-2x fa-male"></i><p class="ok">Ready to go to camp!</p>
+        </div>
+        <div class="child_status">
+          <h3>Child Status: Jane</h3>
+          <i class="fa fa-2x fa-female"></i><p class="not-ok">Please complete medical information!</p>
+        </div>
+        <div class="notif_feed">
+          <div class="notif_title">
+            <h3>Notification System</h3>
+            <i id="notif-control" class="fa fa-minus"></i>
+          </div>
+          <div class="notifications">
+            <div class="notif">
+              <p>This is a message from CEO & Co-Founder Ethan Arrowood. Thank you for participating in this demo!</p>
+            </div>
+            <div class="notif">
+              <p>Jeff my roomate says hello world!</p>
+            </div>
+            <div class="notif">
+              <p>Hot Seat and @WITXLR8 is a wonderful event. I never want it to end.</p>
+            </div>
+            <div class="notif">
+              <p>Are you a coder? Check out Wentworth's first upcoming Hackathon, <a href="#">HackWITus</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+  $("#finish-demo").click(function() {
+    window.location.replace("index.html");
+  });
+  $("#br-control").click(function() {
+    $(".breadcrumb-bar, .breadcrumbs").toggleClass("hide");
+    $(".navbar, .nav").toggleClass("br-h");
+    $(this).toggleClass("fa-minus fa-plus expand")
+  });
+
+  $("#notif-control").click(function () {
+    $(".notifications").toggleClass("hide");
+  })
+</script>
+</body>
+</html>
